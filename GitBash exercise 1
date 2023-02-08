@@ -1,0 +1,32 @@
+Посмотреть где я: pwd
+Создать папку: mkdir folder_1
+Зайти в папку: cd folder_1
+Создать 3 папки: mkdir step_1 step_2 step_3
+Зайти в любую папку: cd step_1
+Создать 5 файлов: touch page_1.txt page_2.txt page_3.txt page_4.json page_5.json
+Создать 3 папки: mkdir part_1 part_2 part_3
+Вывести список содержимого папки: ls -la
+Открыть любой txt файл: vim page_1.txt
+Вписать в открытый файл какой либо текст: i London Paris Moscow Berlin New York Amsterdam
+Сохранить и выйти: esc :wq
+Выйти из папки на уровень выше: cd ..
+Переместить любые 2 созданных файла в любую другую папку: mv step_1/{page_1.txt,page_4.json} step_3
+Скопировать любые 2 созданных файла в другую папку: cp step_1/{page_2.txt,page_5.json} step_2
+Найти файл по имени: find -name page_1.txt
+Посмотреть содержимое в реальном времени: tail -f step_3/page_1.txt
+Вывести несколько первых строк из текстового файла: head -n 3 step_3/page_1.txt
+Вывести несколько последних строк из текстового файла: tail -n 3 step_3/page_1.txt
+Просмотреть содержимое длинного файла: less step_3/page_1.txt       для выхода q
+Вывести дату и время: date
+Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request: curl http://162.55.220.72:5005/terminal-hw-request
+Написать скрипт который выполнит автоматически пункты 3,4,5,6,7,8,13: прописываем команду nano myscript.sh, 
+в открывшемся окне прописываем №!/bin/bash 
+                               cd folder_1 
+                               mkdir step_1 step_2 step_3
+                               cd step_1
+                               touch page_1.txt page_2.txt page_3.txt page_4.json page_5.json
+                               mkdir part_1 part_2 part_3
+                               ls -la
+                               mv page_1.txt page_4.json ../step_3
+                               После нажимаем ctrl+x - y -enter
+                               Для запуска прописываем команду bash myscript.sh
